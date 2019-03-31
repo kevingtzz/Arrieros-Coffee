@@ -18,12 +18,12 @@ body {
     font-family: var(--font-article);
 }
 
+/*-----------------  Navbar  --------------------*/
+
 #menu-icon {
     width: 60px;
     height: 60px;
-
     margin: 4px;
-
     float: right;
 
     border-radius: 50%;
@@ -38,12 +38,11 @@ body {
     color:rgb(107, 107, 107);
 }
 
-#menu-list {
+.menu-list {
     width: 100%;
     padding: 5px;
-
     position: absolute;
-    top: 0;
+    top: -180px;
 
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -53,8 +52,11 @@ body {
 
     background: rgb(248, 249, 250);
 
-    transform: translateY(-180px);
     transition: .35s;
+}
+
+.showMenu {
+    top: 0px;
 }
 
 nav a {
@@ -67,6 +69,29 @@ nav a {
 .fa-home {
     font-size: 2rem;
     color:rgb(107, 107, 107);
+}
+
+/*----------------------- media querys ----------------*/
+
+@media screen and (min-width: 800px) {
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 60px;
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    #menu-list {
+        position: relative;
+        top: 0;
+        height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 100%;
+    }
 }
 
 /*

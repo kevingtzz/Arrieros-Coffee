@@ -1,14 +1,15 @@
 //Navbar animation
 var menu = document.getElementById('menu-icon')
 menu.addEventListener("click", ()=>{
-    let menuList = document.getElementById('menu-list')
-    menuList.style.transform = 'none'
+    var menuList = document.getElementById('menu-list')
+    menuList.classList.add('showMenu')
+    console.log(menuList.classList)
     menuList.addEventListener("click", ()=>{
-        menuList.style.transform = 'translateY(-180px)'
+        menuList.classList.remove('showMenu')
     })
 })
 
-
+/*
 //Swiper initialize
 
 var swiper = new Swiper('.swiper-container', {
@@ -32,4 +33,4 @@ var swiper = new Swiper('.swiper-container', {
     initialSlide: 3,
     speed: 850,
     freeMode: true,
-});
+});*/
