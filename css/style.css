@@ -71,6 +71,78 @@ nav a {
     color:rgb(107, 107, 107);
 }
 
+/*---------------------- Home ---------------------*/
+
+#home {
+    position: relative;
+    
+    height: 100vh;
+    max-height: 1000px;
+    min-height: 900px;
+    
+    background: url(../sources/img/coffee-machine.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    box-shadow: inset 0px -4px 10px;
+}
+
+#isotype {
+    display: none;
+    position: absolute;
+    transform: translateX(-350px);
+
+    width: 350px;
+    height: 460px;
+    min-width: 300px;
+    max-width: 350px;
+
+    background: url(../sources/img/logo-dearrieros.png);
+    background-size: 100% 100%;
+    
+    filter: drop-shadow(5px 5px 5px #222);
+}
+#header-txt {
+    display: none;
+    position: relative;
+    top: 25%;
+    left: 38%;
+    transform: translateX(40px);
+}
+
+#company-name {
+    display: none;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 6rem;
+    font-weight: 1;
+    color: #D4D4D4;
+
+    text-shadow: 6px 3px 4px black;
+}
+
+#coffee-txt {
+    display: none;
+    font-family: var(--font-title);
+    font-size: 6rem;
+    font-weight: 1;
+    color: rgb(241, 240, 240);
+
+    text-shadow: 6px 3px 2px black;
+    
+    transform: translate(380px, -69px)
+}
+
+#slogan {
+    display: none;
+    position: absolute;
+    transform: translate(9px, -158px);
+
+
+    color: rgb(180, 180, 180);
+
+    text-shadow: 6px 3px 2px black;
+}
+
 /*----------------------- media querie ----------------*/
 
 
@@ -102,73 +174,10 @@ nav a {
     }
 }
 
+
 /*
-#home {
-    position: relative;
-
-    height: 100vh;
-    max-height: 1000px;
-    min-height: 900px;
-
-    background: url(../sources/img/coffee-machine.jpg) no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    box-shadow: inset 0px -4px 10px;
-}
 
 
-
-#isotype {
-    position: absolute;
-    transform: translateX(-350px);
-
-    width: 350px;
-    height: 460px;
-    min-width: 300px;
-    max-width: 350px;
-
-    background: url(../sources/img/logo-dearrieros.png);
-    background-size: 100% 100%;
-    
-    filter: drop-shadow(5px 5px 5px #222);
-}
-#header-txt {
-    position: relative;
-    top: 25%;
-    left: 38%;
-    transform: translateX(40px);
-}
-
-#company-name {
-    font-family: 'Gothic A1', sans-serif;
-    font-size: 6rem;
-    font-weight: 1;
-    color: #D4D4D4;
-
-    text-shadow: 6px 3px 4px black;
-}
-
-#coffee-txt {
-    font-family: var(--font-title);
-    font-size: 6rem;
-    font-weight: 1;
-    color: rgb(241, 240, 240);
-
-    text-shadow: 6px 3px 2px black;
-    
-    transform: translate(380px, -69px)
-}
-
-#slogan {
-    position: absolute;
-    transform: translate(9px, -158px);
-
-
-    color: rgb(180, 180, 180);
-
-    text-shadow: 6px 3px 2px black;
-}
 
 main section {
     padding: 60px;
