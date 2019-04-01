@@ -1,7 +1,7 @@
 //Navbar animation
 var menu = document.getElementById('menu-icon')
 menu.addEventListener("click", ()=>{
-    var menuList = document.getElementById('menu-list')
+    let menuList = document.getElementById('menu-list')
     menuList.classList.add('showMenu')
     console.log(menuList.classList)
     menuList.addEventListener("click", ()=>{

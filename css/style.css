@@ -71,14 +71,17 @@ nav a {
     color:rgb(107, 107, 107);
 }
 
-/*----------------------- media querys ----------------*/
+/*----------------------- media querie ----------------*/
+
 
 @media screen and (min-width: 800px) {
+
+/*---------------------------Navbar----------------*/
 
     nav {
         position: fixed;
         width: 100%;
-        height: 60px;
+        height: 45px;
     }
 
     #menu-icon {
@@ -90,7 +93,12 @@ nav a {
         top: 0;
         height: 100%;
         grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: 100%;
+        grid-template-rows: 100%;
+    }
+
+    #homeLink {
+        grid-column: 3;
+        grid-row: 1;
     }
 }
 
