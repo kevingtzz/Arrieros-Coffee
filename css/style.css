@@ -21,13 +21,15 @@ body {
 /*-----------------  Navbar  --------------------*/
 
 #menu-icon {
+    position: fixed;
+    top: 3px;
+    right: 3px;
     width: 60px;
     height: 60px;
     margin: 4px;
-    float: right;
 
     border-radius: 50%;
-    box-shadow: -3px 3px 2px gray;
+    box-shadow: -3px 3px 2px rgba(0, 0, 0, .5);
 
     background: rgb(248, 249, 250);
 }
@@ -74,18 +76,100 @@ nav a {
 /*---------------------- Home ---------------------*/
 
 #home {
-    position: relative;
-    
-    height: 100vh;
-    max-height: 1000px;
-    min-height: 900px;
-    
-    background: url(../sources/img/coffee-machine.jpg) no-repeat center center fixed;
-    background-size: cover;
-    background-attachment: fixed;
-    
-    box-shadow: inset 0px -4px 10px;
+    width: 100vw;
+    height: 500px;
 }
+
+#home-background {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    z-index: -1;
+}
+
+#header-txt {
+    margin: auto;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    top: 90px;
+    text-align: center;
+    z-index: -1;
+    font-size: 15px;
+    transform: translateX(-4px);
+}
+
+#company-name {
+    position: absolute;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 4em;
+    font-weight: 1;
+    color: #D4D4D4;
+
+    text-shadow: 6px 3px 4px black;
+}
+
+#coffee-txt {
+    position: absolute;
+    top: 40px;
+    left: 210px;
+    font-family: var(--font-title);
+    font-size: 3em;
+    font-weight: 1;
+    color: rgb(241, 240, 240);
+
+    text-shadow: 6px 3px 2px black;
+}
+
+#slogan {
+    position: absolute;
+    top: 56px;
+    left: 5px;
+    font-size: .8em;
+    color: rgb(180, 180, 180);
+
+    text-shadow: 6px 3px 2px black;
+}
+
+@media screen and (min-width: 650px) {
+    #header-txt {
+        top: 120px;
+        font-size: 22px;
+        transform: translateX(-50px);
+    }
+
+    #coffee-txt {
+        top: 55px;
+        left: 300px;
+    }
+
+    #slogan {
+        top: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #isotype {
     display: none;
@@ -102,46 +186,9 @@ nav a {
     
     filter: drop-shadow(5px 5px 5px #222);
 }
-#header-txt {
-    display: none;
-    position: relative;
-    top: 25%;
-    left: 38%;
-    transform: translateX(40px);
-}
-
-#company-name {
-    display: none;
-    font-family: 'Gothic A1', sans-serif;
-    font-size: 6rem;
-    font-weight: 1;
-    color: #D4D4D4;
-
-    text-shadow: 6px 3px 4px black;
-}
-
-#coffee-txt {
-    display: none;
-    font-family: var(--font-title);
-    font-size: 6rem;
-    font-weight: 1;
-    color: rgb(241, 240, 240);
-
-    text-shadow: 6px 3px 2px black;
-    
-    transform: translate(380px, -69px)
-}
-
-#slogan {
-    display: none;
-    position: absolute;
-    transform: translate(9px, -158px);
 
 
-    color: rgb(180, 180, 180);
 
-    text-shadow: 6px 3px 2px black;
-}
 
 /*----------------------- media querie ----------------*/
 
