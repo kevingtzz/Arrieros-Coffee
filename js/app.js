@@ -3,11 +3,11 @@ var menu = document.getElementById('menu-icon')
 menu.addEventListener("click", ()=>{
     let menuList = document.getElementById('menu-list')
     menuList.classList.add('showMenu')
-    console.log(menuList.classList)
     menuList.addEventListener("click", ()=>{
         menuList.classList.remove('showMenu')
     })
 })
+
 
 /*
 //Swiper initialize
