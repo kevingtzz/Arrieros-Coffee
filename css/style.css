@@ -1,6 +1,9 @@
 :root {
     --font-title: 'Parisienne', cursive;
+    --font-size-title: 3rem;
+    --font-color-title: rgb(70, 69, 65);
     --font-article: 'Muli', sans-serif;
+    --font-size-article: 1.5rem;
     --section-background-color: rgb(242, 239, 234);
     --social-icon-color: rgb(218, 214, 210);
     --intersection-color: rgb(196, 190, 164);
@@ -30,6 +33,8 @@ body {
     border-radius: 50%;
     box-shadow: -3px 3px 2px rgba(0, 0, 0, .5);
     background: rgb(248, 249, 250);
+    z-index: 10;
+    transition: .5s;
 }
 
 #menu-bars {
@@ -49,6 +54,7 @@ body {
     font-size: 1.5rem;
     background: rgb(248, 249, 250);
     transition: .35s;
+    z-index: 10;
 }
 
 .showMenu {
@@ -70,7 +76,12 @@ nav a {
 
 #home {
     width: 100vw;
-    height: 500px;
+    height: 360px;
+    background: url(/sources/img/coffee-machine.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 #home-background {
@@ -78,6 +89,7 @@ nav a {
     height: 60%;
     position: absolute;
     z-index: -1;
+    display: none;
 }
 
 #header-txt {
@@ -87,15 +99,14 @@ nav a {
     position: relative;
     top: 90px;
     text-align: center;
-    z-index: -1;
     font-size: 15px;
-    transform: translateX(-4px);
+    transform: translateX(-25px);
 }
 
 #company-name {
     position: absolute;
     font-family: 'Gothic A1', sans-serif;
-    font-size: 4em;
+    font-size: 4.5rem;
     font-weight: 1;
     color: #D4D4D4;
     text-shadow: 6px 3px 4px black;
@@ -103,8 +114,8 @@ nav a {
 
 #coffee-txt {
     position: absolute;
-    top: 40px;
-    left: 210px;
+    top: 47px;
+    left: 250px;
     font-family: var(--font-title);
     font-size: 3em;
     font-weight: 1;
@@ -114,7 +125,7 @@ nav a {
 
 #slogan {
     position: absolute;
-    top: 56px;
+    top: 70px;
     left: 5px;
     font-size: .8em;
     color: rgb(180, 180, 180);
@@ -138,9 +149,107 @@ nav a {
     }
 }
 
-/*---------------------- media queries ----------------*/
+/*-------------------- Tours section --------------*/
+
+#tours {
+    width: 100vw; 
+    height: auto;
+    background-color: var(--section-background-color);
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10%;
+    grid-template-columns: 100%;
+}
+
+#tour_title {
+    margin-top: 20px;
+    grid-row: 1;
+}
+
+#tour_intro {
+    margin: 15px 10px 40px;
+    grid-row: 2;
+}
+
+#tour_video {
+    grid-row: 3;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-row: 4;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 8px 15px gray;
+    border: 10px solid rgb(233, 232, 232);
+}
+
+#swiper_pagination {
+    grid-row: 3;
+}
+
+#tours-btn {
+    grid-row: 5;
+}
+
+#tours-btn {
+
+}
+
+#tours-btn:hover {
+    box-shadow: 0px 2px 3px gray;
+}
+
+/*------------------ Global Classes -----------------------*/
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: var(--font-size-title);
+    color: var(--font-color-title);
+    text-align: center;
+}
+
+.section-article {
+    text-align: center;
+    font-size: var(--font-size-article);
+    color: var(--font-color-title);
+}
+
+.btn-wrapper {
+    width: 100%;
+    margin: 20px 0 20px;
+    text-align: center;
+}
+
+.section-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 40px;
+    font-size: 1.5rem;
+    font-family: var(--font-article);
+
+    border: 1px solid rgb(56, 55, 53);
+    border-radius: 10px;
+    background: rgb(36, 35, 34);
+    color: rgb(238, 238, 238);
+
+    box-shadow: 0px 4px 6px gray;
+}
+
+/*---------- media queries desktop ---------------*/
 
 @media screen and (min-width: 800px) {
+
+    /*--------------------- home -----------------*/
+
+    #home {
+        height: 500px;
+    }
     
     /*-------------------- Navbar ----------------*/
     
@@ -169,24 +278,26 @@ nav a {
 
 /*--------------------- Home ----------------------*/
 
-    #isotype {
-        display: none;
-        position: absolute;
-        transform: translateX(-350px);
-    
-        width: 350px;
-        height: 460px;
-        min-width: 300px;
-        max-width: 350px;
-    
-        background: url(../sources/img/logo-dearrieros.png);
-        background-size: 100% 100%;
-        
-        filter: drop-shadow(5px 5px 5px #222);
+    #home-background {
+        height: 70vh;
+    }
+
+    #header-txt {
+        font-size: 25px;
+        transform: translate(-60px, 60px);
+    }
+
+    #coffee-txt {
+        top: 63px;
+        left: 340px;
+    }
+
+    #slogan {
+        top: 90px;
     }
 }
 
-/*==================== media query horizontal =================*/
+/*=========== media query horizontal(Phone) =================*/
 
 @media screen and (max-height: 400px) {
 
@@ -202,149 +313,7 @@ nav a {
 }
 
 /*
-
-
-
-main section {
-    padding: 60px;
-}
-
-#tours {
-    padding: 0;
-    position: relative;
-    
-    width: 100vw;
-    height: 81vh;
-    max-height: 700px;
-    min-height: 600px;
-    
-    background-color: var(--section-background-color);
-}
-
-#tours-background-wrapper {
-    position: relative;
-    
-    width: 100%;
-    height: 100%;
-    
-    background: url(../sources/img/Coffe-table-trans.png);
-    background-size: cover;
-    
-    transform: translateX(-60px);
-    filter: drop-shadow(5px 5px 5px #222);
-}
-
-#tours-text-wrapper {
-    display: inline-block;
-    
-    position: absolute;
-    right: 70px;
-    top: 15%;
-    
-    width: 50%;
-    height: 500px;
-    
-    text-align: center;
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    color: rgb(80, 77, 72);
-}
-
-#tours-text-wrapper p {
-    position: relative;
-    top: 20px;
-    font-family: var(--font-article);
-    font-size: var(--text-section-size);
-}
-
-#tours-btn {
-    text-decoration: none;
-    display: inline-block;
-    padding: 6px 40px;
-    position: relative;
-    top: 65px;
-    
-    font-size: 1.5rem;
-    font-family: var(--font-article);
-    
-    border: 1px solid rgb(56, 55, 53);
-    background: rgb(36, 35, 34);
-    color: rgb(238, 238, 238);
-
-    box-shadow: 0px 4px 6px gray;
-}
-
-#tours-btn:hover {
-    box-shadow: 0px 2px 3px gray;
-}
-
-#photo-gallery-title {
-    display: block;
-    position: relative;
-    width: 100vw;
-    height: 150px;
-    
-    text-align: center;
-    
-    background-color: rgb(196, 190, 164);
-    box-shadow: inset 0px 4px 6px gray;
-}
-
-#photo-gallery-title h4{
-    position: relative;
-    top: 33%;
-    
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    color: black;
-}
-
-#photo-gallery {
-    position: relative;
-    width: 100vw;
-    height: 950px;
-    
-    background-color: var(--section-background-color);
-    
-    box-shadow: inset 0px 4px 6px gray;
-}
-
-#video {
-    display: block;
-    position: relative;
-    top: 60px;
-    left: 10%;
-    width: 80%;
-    height: 500px;
-    background: black;
-}
-
-.swiper-container {
-    position: relative;
-    top: 35px;
-
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-
-    box-shadow: 5px 8px 15px gray;
-    border: 10px solid rgb(233, 232, 232);
-}
-
-#line-gallery {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 130px;
-    background: rgb(196, 190, 164);
-}
-
+x
 #products {
     margin: 0;
     padding: 0;

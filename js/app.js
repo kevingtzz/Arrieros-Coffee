@@ -8,8 +8,26 @@ menu.addEventListener("click", ()=>{
     })
 })
 
+var lastPagePosition = pageYOffset
+window.addEventListener("scroll", () => {
+    if (pageYOffset > lastPagePosition) {
+        menu.style.transform = "translateY(-65px)"
+        setTimeout(() => {
+            let tourPosition = document.getElementById("tours").getBoundingClientRect().top
+            //let productsPosition = document.getElementById("products").getBoundingClientRect().top
+            //let aboutPosition = document.getElementById("about").getBoundingClientRect().top
+            let homePosition = document.getElementById("home").getBoundingClientRect().top
+            if (tourPosition == 0 /*|| productsPosition == 0 || aboutPosition == 0*/) {
+                menu.style.transform = "translateY(-65px)"
+            } 
+        }, 10)
+    } else if (pageYOffset < lastPagePosition) {
+        menu.style.transform = "translateY(0px)"
+    }
+    lastPagePosition = pageYOffset
+})
 
-/*
+
 //Swiper initialize
 
 var swiper = new Swiper('.swiper-container', {
@@ -33,4 +51,4 @@ var swiper = new Swiper('.swiper-container', {
     initialSlide: 3,
     speed: 850,
     freeMode: true,
-});*/
+});
