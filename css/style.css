@@ -270,6 +270,7 @@ nav a {
     }
     
     .menu-list {
+        padding-bottom: 0px;
         position: relative;
         top: 0;
         height: 100%;
