@@ -48,7 +48,8 @@ window.addEventListener("scroll", () => {
     lastPagePosition = pageYOffset
 
     if (home.getBoundingClientRect().top < -150) {          //turns background home transparent when client is on home.
-        menu_desktop.style.background = "white";
+        menu_desktop.style.background = "rgb(242, 239, 234)"
+        menu_desktop.style.boxShadow = "2px 0px 8px #888888"
         for (i = 1; i < links.length; i++) {
             links[i].style.color = "rgb(63, 63, 63)"
             links[i].style.textShadow = "none"
@@ -57,6 +58,7 @@ window.addEventListener("scroll", () => {
     } else {
         if (screen.width >= 800) {
             menu_desktop.style.background = "transparent";
+            menu_desktop.style.boxShadow = "none"
             for (i = 1; i < links.length; i++) {
                 links[i].style.color = "rgb(214, 214, 214)"
                 links[i].style.textShadow = "0px 0.5px 2px black"
