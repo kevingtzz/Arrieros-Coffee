@@ -1,9 +1,9 @@
 :root {
     --font-title: 'Parisienne', cursive;
-    --font-size-title: 3rem;
-    --font-color-title: rgb(70, 69, 65);
     --font-article: 'Muli', sans-serif;
+    --font-size-title: 3rem;
     --font-size-article: 1.5rem;
+    --font-color-title: rgb(70, 69, 65);
     --section-background-color: rgb(242, 239, 234);
     --social-icon-color: rgb(218, 214, 210);
     --intersection-color: rgb(196, 190, 164);
@@ -69,7 +69,6 @@ nav a {
 
 .fa-home {
     font-size: 2rem;
-    color:rgb(107, 107, 107);
 }
 
 /*---------------------- Home ---------------------*/
@@ -129,7 +128,7 @@ nav a {
     left: 5px;
     font-size: .8em;
     color: rgb(180, 180, 180);
-    text-shadow: 6px 3px 2px black;
+    text-shadow: 3px 3px 2px black;
 }
 
 @media screen and (min-width: 650px) {
@@ -193,14 +192,6 @@ nav a {
     grid-row: 5;
 }
 
-#tours-btn {
-    /*grid-row: 5;*/
-}
-
-#tours-btn {
-
-}
-
 #tours-btn:hover {
     box-shadow: 0px 2px 3px gray;
 }
@@ -257,18 +248,29 @@ nav a {
         position: fixed;
         width: 100%;
         height: 45px;
+        z-index: 10;
+    }
+
+    nav a {
+        color: rgb(214, 214,214);
+        text-shadow: 0px 0.5px 2px black;
+    }
+
+    .fa-home {
+        color: rgb(214, 214,214);
     }
     
     #menu-icon {
-        display: none;
+        display: none;         /*Mobile menu icon bars*/
     }
     
-    #menu-list {
+    .menu-list {
         position: relative;
         top: 0;
         height: 100%;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 100%;
+        background: transparent;
     }
     
     #homeLink {
@@ -288,12 +290,13 @@ nav a {
     }
 
     #coffee-txt {
-        top: 63px;
-        left: 340px;
+        top: 38px;
+        left: 280px;
     }
 
     #slogan {
-        top: 90px;
+        top: 70px;
+        color:rgb(212, 212, 212);
     }
 }
 
