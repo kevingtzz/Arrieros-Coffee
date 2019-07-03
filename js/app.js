@@ -1,10 +1,9 @@
 //Navbar animation
 
-var menu = document.getElementById('menu-icon')
+var menu = document.getElementById('menu-bars')
 var menu_desktop = document.getElementById('menu-list')
 var home = document.getElementById("home")
 var links = document.querySelectorAll("nav a")
-console.log(links)
 
 menu.addEventListener("click", ()=>{
     let menuList = document.getElementById('menu-list')
@@ -16,7 +15,7 @@ menu.addEventListener("click", ()=>{
 
 var lastPagePosition = pageYOffset
 window.addEventListener("scroll", () => {
-    if (pageYOffset > lastPagePosition && screen.width < 800) {
+    if (pageYOffset > lastPagePosition && screen.width < 750) {
         menu.style.transform = "translateY(-65px)"
         setTimeout(() => {
             let tourPosition = document.getElementById("tours").getBoundingClientRect().top
@@ -27,7 +26,7 @@ window.addEventListener("scroll", () => {
                 menu.style.transform = "translateY(-65px)"
             } 
         }, 10)
-    } else if (pageYOffset < lastPagePosition && screen.width < 800) {
+    } else if (pageYOffset < lastPagePosition && screen.width < 750) {
         menu.style.transform = "translateY(0px)"
     } else {
         if (pageYOffset > lastPagePosition) { // Desktop nav animation
