@@ -152,7 +152,7 @@ nav a {
     height: auto;
     background-color: var(--section-background-color);
     display: grid;
-    grid-template-rows: 6% 30% 20% 36% 8%;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 100%;
 }
 
@@ -176,6 +176,7 @@ nav a {
     padding-bottom: 50px;
     grid-row: 4;
 }
+
 .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -232,12 +233,6 @@ nav a {
 /*---------- media queries desktop ---------------*/
 
 @media screen and (min-width: 800px) {
-
-    /*--------------------- home -----------------*/
-
-    #home {
-        height: 500px;
-    }
     
     /*-------------------- Navbar ----------------*/
     
@@ -281,7 +276,11 @@ nav a {
         grid-row: 1;
     }
 
-/*--------------------- Home ----------------------*/
+    /*--------------------- Home ----------------------*/
+
+    #home {
+        height: 500px;
+    }
 
     #home-background {
         height: 70vh;
@@ -301,6 +300,13 @@ nav a {
         top: 70px;
         color:rgb(212, 212, 212);
     }
+
+    /*---------------------- Coffee tour -----------------------*/
+
+    #tours {
+        padding: 10px 40px;
+    }   
+
 }
 
 /*=========== media query horizontal(Phone) =================*/
