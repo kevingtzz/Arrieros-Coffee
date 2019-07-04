@@ -9,7 +9,7 @@ menu.addEventListener("click", ()=>{
     let menuList = document.getElementById('menu-list')
     menuList.classList.add('showMenu')
     menuList.addEventListener("click", ()=>{
-        menuList.classList.remove('showMenu')
+    menuList.classList.remove('showMenu')
     })
 })
 
