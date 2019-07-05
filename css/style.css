@@ -193,15 +193,7 @@ nav a {
     grid-template-columns: 100%;
 }
     
-#products-wrapper {
-    position: relative;
-    grid-row: 3;
-    width: auto;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-rows: auto auto;
-}
+
     
 #product-honey-wrapper {
     grid-row: 1;
@@ -217,10 +209,10 @@ nav a {
         display: inline-block;
         width: 160px;
         height: 160px;
-        background: url(../sources/img/coffee-cherry.png);
+        background: url(../sources/img/Products/product.png);
         background-size: contain;
         background-repeat: no-repeat;
-    
+        transform: translateX(20px);
         filter: drop-shadow(5px 5px 5px #222);
     }
     
@@ -230,9 +222,10 @@ nav a {
         display: inline-block;
         width: 160px;
         height: 160px;
-        background: url(../sources/img/coffee-cherry.png);
+        background: url(../sources/img/Products/product.png);
         background-size: contain;
         background-repeat: no-repeat;
+        transform: translateX(20px);
     
         filter: drop-shadow(5px 5px 5px #222);
     }
@@ -310,8 +303,13 @@ nav a {
 
 .product-wrapper {
     display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: auto;
     grid-template-rows: auto auto;
     text-align: center;
+    position: relative;
+    margin-bottom: 30px; 
 }
 
 /*---------- media queries desktop ---------------*/
@@ -391,6 +389,9 @@ nav a {
         padding: 10px 40px;
     }   
 
+    /*------------------------ Products --------------------------*/
+
+    
 }
 
 /*=========== media query horizontal(Phone) =================*/
