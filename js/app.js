@@ -4,12 +4,15 @@ var menu = document.getElementById('menu-bars')
 var menu_desktop = document.getElementById('menu-list')
 var home = document.getElementById("home")
 var links = document.querySelectorAll("nav a")
+var show_menu = false
 
 menu.addEventListener("click", ()=>{
-    let menuList = document.getElementById('menu-list')
-    menuList.classList.add('showMenu')
-    menuList.addEventListener("click", ()=>{
-    menuList.classList.remove('showMenu')
+    menu.style.transform = "translateY(-65px)"
+    menu_desktop.classList.add('showMenu')
+    show_menu = true
+    menu_desktop.addEventListener("click", ()=>{
+        menu_desktop.classList.remove('showMenu')
+        show_menu = false
     })
 })
 
@@ -26,7 +29,7 @@ window.addEventListener("scroll", () => {
                 menu.style.transform = "translateY(-65px)"
             } 
         }, 10)
-    } else if (pageYOffset < lastPagePosition && screen.width < 750) {
+    } else if (pageYOffset < lastPagePosition && screen.width < 750 && show_menu == false) {
         menu.style.transform = "translateY(0px)"
     } else {
         if (pageYOffset > lastPagePosition) { // Desktop nav animation
@@ -47,7 +50,7 @@ window.addEventListener("scroll", () => {
     lastPagePosition = pageYOffset
 
     if (home.getBoundingClientRect().top < -150) {          //turns background home transparent when client is on home.
-        menu_desktop.style.background = "rgb(242, 239, 234)"
+        menu_desktop.style.background = "rgba(242, 239, 234, .97)"
         menu_desktop.style.boxShadow = "2px 0px 8px #888888"
         for (i = 1; i < links.length; i++) {
             links[i].style.color = "rgb(63, 63, 63)"
