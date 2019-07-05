@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
             //let productsPosition = document.getElementById("products").getBoundingClientRect().top
             //let aboutPosition = document.getElementById("about").getBoundingClientRect().top
             let homePosition = document.getElementById("home").getBoundingClientRect().top
-            if (tourPosition == 0 /*|| productsPosition == 0 || aboutPosition == 0*/) {
+            if (tourPosition == 0 || productsPosition == 0 || aboutPosition == 0) {
                 menu.style.transform = "translateY(-65px)"
             } 
         }, 10)
