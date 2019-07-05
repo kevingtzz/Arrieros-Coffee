@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
         menu.style.transform = "translateY(0px)"
     } else {
         if (pageYOffset > lastPagePosition) { // Desktop nav animation
-            menu_desktop.style.transform = "translateY(-65px)"
+                menu_desktop.style.transform = "translateY(-65px)"
             setTimeout(() => {
                 let tourPosition = document.getElementById("tours").getBoundingClientRect().top
                 //let productsPosition = document.getElementById("products").getBoundingClientRect().top
