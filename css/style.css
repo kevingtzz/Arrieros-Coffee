@@ -20,6 +20,7 @@
 body {
     font-family: var(--font-article);
     text-align: center;
+    overflow-x: hidden;
 }
 
 /*-----------------  Navbar  --------------------*/
