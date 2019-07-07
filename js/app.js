@@ -21,9 +21,11 @@ menu.addEventListener("click", ()=>{
 
 var lastPagePosition = pageYOffset
 window.addEventListener("scroll", () => {
-    if (pageYOffset > lastPagePosition && screen.width < 750) {
+    if (pageYOffset > lastPagePosition && screen.width < 790) {
         menu.style.transform = "translateY(-65px)"
-    } else if (pageYOffset < lastPagePosition && screen.width < 750 && show_menu == false) {
+        menu_desktop.style.transform = "translateY(-65px)"
+        show_menu = false
+    } else if (pageYOffset < lastPagePosition && screen.width < 790 && show_menu == false) {
         menu.style.transform = "translateY(0px)"
         setTimeout(() => {
             let tourPosition = document.getElementById("tours").getBoundingClientRect().top
@@ -34,8 +36,8 @@ window.addEventListener("scroll", () => {
                 menu.style.transform = "translateY(-65px)"
             } 
         }, 5)
-    } else {   //------------------------------------- Desktop nav animation -------------------------------
-        if (pageYOffset > lastPagePosition) { 
+    }    //------------------------------------- Desktop nav animation -------------------------------
+    if (pageYOffset > lastPagePosition && screen.width >= 750) { 
                 menu_desktop.style.transform = "translateY(-65px)"
             setTimeout(() => {
                 let tourPosition = document.getElementById("tours").getBoundingClientRect().top
@@ -46,10 +48,9 @@ window.addEventListener("scroll", () => {
                     menu_desktop.style.transform = "translateY(-65px)"
                 } 
             }, 10)
-        } else if (pageYOffset < lastPagePosition) {
+        } else if (pageYOffset < lastPagePosition && screen.width >= 750) {
             menu_desktop.style.transform = "translateY(0px)"
         }
-    }
     lastPagePosition = pageYOffset
 
     if (home.getBoundingClientRect().top < -150) {          //turns background home transparent when client is on home.
