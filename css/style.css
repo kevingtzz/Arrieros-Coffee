@@ -11,14 +11,15 @@
 }
 
 * {
-    margin: 0%;
-    padding:  0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-article);
+    text-align: center;
 }
 
 /*-----------------  Navbar  --------------------*/
@@ -41,7 +42,7 @@ body {
 }
 
 .menu-list {
-    width: 100%;
+    width: 100vw;
     padding: 5px;
     position: fixed;
     top: -180px;
@@ -52,10 +53,6 @@ body {
     font-size: 1.5rem;
     transition: .35s;
     z-index: 10;
-}
-
-.showMenu {
-    top: 0px;
 }
 
 nav a {
@@ -82,8 +79,7 @@ nav a {
 }
 
 #home-background {
-    width: 100%;
-    height: 60%;
+    width: 100vw;
     position: absolute;
     z-index: -1;
     display: none;
@@ -366,7 +362,7 @@ footer {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 33% 34% 33%;
+    grid-template-columns: auto auto auto;
     text-shadow: 4px 8px 8px rgb(24, 24, 23);
 }
 
@@ -378,7 +374,6 @@ footer {
 .fa-facebook-square {
     grid-column: 1;
     position: relative;
-    left: 80px;
     font-size: 3rem;
     color: var(--social-icon-color);
 }
@@ -392,7 +387,6 @@ footer {
 .fa-instagram {
     grid-column: 3;
     position: relative;
-    left: -80px;
     font-size: 3.2rem;
     color: var(--social-icon-color);
 }

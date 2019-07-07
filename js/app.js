@@ -5,14 +5,17 @@ var menu_desktop = document.getElementById('menu-list')
 var home = document.getElementById("home")
 var links = document.querySelectorAll("nav a")
 var show_menu = false
+var menu_click = false
 
 menu.addEventListener("click", ()=>{
     menu.style.transform = "translateY(-65px)"
-    menu_desktop.classList.add('showMenu')
+    menu_desktop.style.transform = "translateY(180px)"
     show_menu = true
+    menu_click = true
     menu_desktop.addEventListener("click", ()=>{
-        menu_desktop.classList.remove('showMenu')
+        menu_desktop.style.transform = "translateY(-180px)"
         show_menu = false
+        menu_click = false
     })
 })
 
@@ -20,19 +23,19 @@ var lastPagePosition = pageYOffset
 window.addEventListener("scroll", () => {
     if (pageYOffset > lastPagePosition && screen.width < 750) {
         menu.style.transform = "translateY(-65px)"
+    } else if (pageYOffset < lastPagePosition && screen.width < 750 && show_menu == false) {
+        menu.style.transform = "translateY(0px)"
         setTimeout(() => {
             let tourPosition = document.getElementById("tours").getBoundingClientRect().top
-            //let productsPosition = document.getElementById("products").getBoundingClientRect().top
-            //let aboutPosition = document.getElementById("about").getBoundingClientRect().top
+            let productsPosition = document.getElementById("products").getBoundingClientRect().top
+            let aboutPosition = document.getElementById("about").getBoundingClientRect().top
             let homePosition = document.getElementById("home").getBoundingClientRect().top
             if (tourPosition == 0 || productsPosition == 0 || aboutPosition == 0) {
                 menu.style.transform = "translateY(-65px)"
             } 
-        }, 10)
-    } else if (pageYOffset < lastPagePosition && screen.width < 750 && show_menu == false) {
-        menu.style.transform = "translateY(0px)"
-    } else {
-        if (pageYOffset > lastPagePosition) { // Desktop nav animation
+        }, 5)
+    } else {   //------------------------------------- Desktop nav animation -------------------------------
+        if (pageYOffset > lastPagePosition) { 
                 menu_desktop.style.transform = "translateY(-65px)"
             setTimeout(() => {
                 let tourPosition = document.getElementById("tours").getBoundingClientRect().top
