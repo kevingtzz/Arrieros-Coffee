@@ -102,8 +102,9 @@ nav a {
     font-family: 'Gothic A1', sans-serif;
     font-size: 4.5rem;
     font-weight: 1;
-    color: #D4D4D4;
+    color: white;
     text-shadow: 6px 3px 4px black;
+    animation: opacity 4s;
 }
 
 #coffee-txt {
@@ -115,6 +116,11 @@ nav a {
     font-weight: 1;
     color: rgb(241, 240, 240);
     text-shadow: 6px 3px 2px black;
+    opacity: 0;
+    animation-name: neon, brightness;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 #slogan {
@@ -124,6 +130,11 @@ nav a {
     font-size: .8em;
     color: rgb(180, 180, 180);
     text-shadow: 3px 3px 2px black;
+    opacity: 0;
+    animation-name: opacity;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 @media screen and (min-width: 650px) {
@@ -591,4 +602,42 @@ width: auto;
         position: relative;
         margin-bottom: 30px; 
     }
+}
+
+/*---------------------------- Animations ----------------------*/
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes brightness {
+    from {
+        text-shadow: none;
+    }
+    to {
+        text-shadow:
+        0 0 5px rgb(91, 92, 84),
+        0 0 10px rgb(91, 92, 84),
+        0 0 20px rgb(91, 92, 84),
+        0 0 40px rgb(91, 92, 84),
+        0 0 80px rgb(91, 92, 84),
+        0 0 90px rgb(91, 92, 84),
+        0 0 100px rgb(91, 92, 84),
+		0 0 140px rgb(91, 92, 84),
+		0 0 180px rgb(91, 92, 84);
+    }  
+}
+
+@keyframes neon {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    70% {opacity: 0;}
+    85% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
 }
