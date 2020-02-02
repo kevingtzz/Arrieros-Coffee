@@ -114,7 +114,7 @@ nav a {
     font-family: var(--font-title);
     font-size: 3em;
     font-weight: 1;
-    color: rgb(241, 240, 240);
+    color: rgb(255, 255, 255);
     text-shadow: 6px 3px 2px black;
     opacity: 0;
     animation-name: neon, brightness;
@@ -160,20 +160,20 @@ nav a {
     width: 100vw; 
     height: auto;
     background-color: var(--section-background-color);
-    display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: 100%;
+}
+
+#tour_container {
+    display: block;
 }
 
 #tour_video {
-    grid-row: 3;
+    text-align: center;
 }
 
 .swiper-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    grid-row: 4;
 }
 
 .swiper-slide {
@@ -183,10 +183,6 @@ nav a {
     height: 300px;
     box-shadow: 5px 8px 15px gray;
     border: 10px solid rgb(233, 232, 232);
-}
-
-#swiper_pagination {
-    grid-row: 5;
 }
 
 /*-------------------- Products section ------------------------------*/
@@ -375,6 +371,7 @@ footer {
     height: auto;
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
     text-shadow: 4px 8px 8px rgb(24, 24, 23);
 }
 
@@ -384,20 +381,41 @@ footer {
 }
 
 .fa-facebook-square {
-    grid-column: 1;
+
     position: relative;
     font-size: 3rem;
     color: var(--social-icon-color);
 }
 
-.fa-tripadvisor {
-    grid-column: 2;
+#tripadvisor_icon {
+    grid-column: 1;
     font-size: 3.8rem;
     color: var(--social-icon-color);
 }
 
-.fa-instagram {
+#getyourguide_icon {
+    display: absolute;
+    grid-column: 2;
+    grid-row: 1;
+    height: 80px;
+    width: 100%;
+    background-image: url(../sources/icons/getyourguide.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#instagram_icon {
+    grid-row: 2;
     grid-column: 3;
+    position: relative;
+    font-size: 3.2rem;
+    color: var(--social-icon-color);
+}
+
+.fa-whatsapp-square {
+    grid-column: 1;
+    grid-row: 1;
     position: relative;
     font-size: 3.2rem;
     color: var(--social-icon-color);
@@ -407,9 +425,6 @@ footer {
     transition: .5s; 
 }
 
-.fas {
-    transition: .5s; 
-}
 
 .fa-facebook-square:hover {
     color: white;
@@ -496,6 +511,10 @@ footer {
 #trip-tooltip {
     top: 20px;
     left: 90px;
+}
+
+#getyourguide-tooltip {
+    transform: translate(25px, -90px);
 }
 
 .tooltip:hover .tooltiptext {
@@ -588,7 +607,78 @@ width: auto;
 
     #tours {
         padding: 10px 40px;
-    }   
+        display: grid;
+        grid-template-columns: auto 40%;
+    } 
+    
+    #tour_container {
+
+        padding-bottom: 50px;
+    }
+
+    #tour_txt_container {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #tour_video {
+        padding-top: 40px;
+        padding-right: 10px;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #tour_intro {
+        padding-right: 70px;
+        padding-top: 20px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #tour_btn {
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    .swiper-container {
+        display: inline-block;
+        width: 650px;
+        padding-top: 65px;
+        padding-bottom: 50px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        box-shadow: 5px 8px 15px gray;
+        border: 10px solid rgb(233, 232, 232);
+    }
+    
+    #social-network-area {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    #getyourguide_icon {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    #tripadvisor_icon {
+        grid-column: 4;
+    }
+
+    #instagram_icon {
+        grid-column: 5;
+        grid-row: 1;
+    }
+
 
     /*------------------------ Products --------------------------*/
 
