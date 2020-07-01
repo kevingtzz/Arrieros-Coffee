@@ -80,7 +80,6 @@
     } 
     
     #tour_container {
-
         padding-bottom: 50px;
     }
 
@@ -99,6 +98,8 @@
     #tour_intro {
         padding-right: 70px;
         padding-top: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
         grid-column: 1;
         grid-row: 1;
     }
@@ -162,5 +163,17 @@
 
     .products-wrapper {
         padding: 20px 70px;
+    }
+
+    .section-article {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    /*/----------------------- about ---------------------/*/
+
+    #about-article {
+        margin-left: 60px;
+        margin-right: 60px;
     }
 }
