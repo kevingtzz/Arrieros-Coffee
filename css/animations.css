@@ -1,0 +1,35 @@
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes brightness {
+    from {
+        text-shadow: none;
+    }
+    to {
+        text-shadow:
+        0 0 5px rgb(91, 92, 84),
+        0 0 10px rgb(91, 92, 84),
+        0 0 20px rgb(91, 92, 84),
+        0 0 40px rgb(91, 92, 84),
+        0 0 80px rgb(91, 92, 84),
+        0 0 90px rgb(91, 92, 84),
+        0 0 100px rgb(91, 92, 84),
+		0 0 140px rgb(91, 92, 84),
+		0 0 180px rgb(91, 92, 84);
+    }  
+}
+
+@keyframes neon {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    70% {opacity: 0;}
+    85% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 1;}
+}

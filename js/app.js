@@ -1,11 +1,11 @@
 //Navbar animation
 
-var menu = document.getElementById('menu-bars')
-var menu_desktop = document.getElementById('menu-list')
-var home = document.getElementById("home")
-var links = document.querySelectorAll("nav a")
-var show_menu = false
-var menu_click = false
+var menu = document.getElementById('menu-bars');
+var menu_desktop = document.getElementById('menu-list');
+var home = document.getElementById("home");
+var links = document.querySelectorAll("nav a");
+var show_menu = false;
+var menu_click = false;
 
 menu.addEventListener("click", ()=>{
     menu.style.transform = "translateY(-65px)"
@@ -36,7 +36,10 @@ window.addEventListener("scroll", () => {
                 menu.style.transform = "translateY(-65px)"
             } 
         }, 5)
-    }    //------------------------------------- Desktop nav animation -------------------------------
+    }    
+    
+    //------------------------------------- Desktop nav animation -------------------------------
+
     if (pageYOffset > lastPagePosition && screen.width >= 750) { 
                 menu_desktop.style.transform = "translateY(-65px)"
             setTimeout(() => {

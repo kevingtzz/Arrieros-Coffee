@@ -137,6 +137,30 @@ nav a {
     animation-delay: 2s;
 }
 
+#laguage_options_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    position: relative;
+    top: 150px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.language_btn {
+    width: 55px;
+    transition: 0.25s;
+}
+
+.language_btn:hover {
+    width: 60px;
+}
+
+.language_option_img {
+    width: 100%;
+    padding: 10px;
+}
+
 @media screen and (min-width: 650px) {
     #header-txt {
         top: 120px;
@@ -491,207 +515,4 @@ width: auto;
     width: 100%;
     height: 20px;
     font-size: .8rem;
-}
-
-/*---------- media queries desktop ---------------*/
-
-@media screen and (min-width: 800px) {
-    
-    /*-------------------- Navbar ----------------*/
-    
-    nav {
-        position: fixed;
-        width: 100%;
-        height: 45px;
-        z-index: 10;
-    }
-
-    nav a {
-        color: rgb(214, 214,214);
-        border-bottom: 0px solid rgba(214, 214,214, 0);
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        border-bottom: 1px solid rgba(214, 214,214, 1);
-    }
-
-    .fa-home {
-        color: rgb(214, 214,214);
-    }
-    
-    #menu-bars {
-        display: none;         /*Mobile menu icon bars*/
-    }
-    
-    .menu-list {
-        padding-bottom: 0px;
-        position: relative;
-        top: 0;
-        height: 100%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 100%;
-        background: transparent;
-    }
-    
-    #homeLink {
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    /*--------------------- Home ----------------------*/
-
-    #home {
-        height: 500px;
-    }
-
-    #home-background {
-        height: 70vh;
-    }
-
-    #header-txt {
-        font-size: 25px;
-        transform: translate(-60px, 60px);
-    }
-
-    #coffee-txt {
-        top: 38px;
-        left: 280px;
-    }
-
-    #slogan {
-        top: 70px;
-        color:rgb(212, 212, 212);
-    }
-
-    /*---------------------- Coffee tour -----------------------*/
-
-    #tours {
-        padding: 10px 40px;
-        display: grid;
-        grid-template-columns: auto 40%;
-    } 
-    
-    #tour_container {
-
-        padding-bottom: 50px;
-    }
-
-    #tour_txt_container {
-        grid-row: 1;
-        grid-column: 1;
-    }
-
-    #tour_video {
-        padding-top: 40px;
-        padding-right: 10px;
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    #tour_intro {
-        padding-right: 70px;
-        padding-top: 20px;
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    #tour_btn {
-        grid-column: 1;
-        grid-row: 1;
-
-    }
-
-    .swiper-container {
-        display: inline-block;
-        width: 650px;
-        padding-top: 65px;
-        padding-bottom: 50px;
-        grid-column: 1;
-        grid-row: 1;
-    }
-    
-    .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 300px;
-        height: 300px;
-        box-shadow: 5px 8px 15px gray;
-        border: 10px solid rgb(233, 232, 232);
-    }
-    
-    #social-network-area {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: auto auto auto auto auto;
-    }
-
-    #getyourguide_icon {
-        grid-column: 3;
-        grid-row: 1;
-    }
-
-    #tripadvisor_icon {
-        grid-column: 4;
-    }
-
-    #instagram_icon {
-        grid-column: 5;
-        grid-row: 1;
-    }
-
-
-    /*------------------------ Products --------------------------*/
-
-    .products-wrapper {
-        display: grid;
-        width: auto;
-        height: auto;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        text-align: center;
-        position: relative;
-    }
-
-    .products-wrapper {
-        padding: 20px 70px;
-    }
-}
-
-/*---------------------------- Animations ----------------------*/
-
-@keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes brightness {
-    from {
-        text-shadow: none;
-    }
-    to {
-        text-shadow:
-        0 0 5px rgb(91, 92, 84),
-        0 0 10px rgb(91, 92, 84),
-        0 0 20px rgb(91, 92, 84),
-        0 0 40px rgb(91, 92, 84),
-        0 0 80px rgb(91, 92, 84),
-        0 0 90px rgb(91, 92, 84),
-        0 0 100px rgb(91, 92, 84),
-		0 0 140px rgb(91, 92, 84),
-		0 0 180px rgb(91, 92, 84);
-    }  
-}
-
-@keyframes neon {
-    0% {opacity: 0;}
-    20% {opacity: 1;}
-    70% {opacity: 0;}
-    85% {opacity: 1;}
-    90% {opacity: 0;}
-    100% {opacity: 1;}
 }

@@ -18,7 +18,9 @@
     <!--swiper-->
     <link rel="stylesheet" href="css/swiper.min.css">
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile_style.css">
+    <link rel="stylesheet" href="css/desktop_styles.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 
 <body>
@@ -28,9 +30,9 @@
             <div class="menu-list" id="menu-list">
                 <a id="homeLink" class="nav-link" href="#home"><i class="fas fa-home" id="home-icon"></i></a>
                 <a id="toursLink" class="nav-link" href="#tours">Coffee Tour</a>
-                <a id="productsLink" class="nav-link" href="#products">Productos</a>
-                <a id="aboutLink" class="nav-link" href="#about">Sobre nosotros</a>
-                <a id="contactLink" class="nav-link" href="#contact">Contacto</a>
+                <a id="productsLink" class="nav-link" href="#products">Products</a>
+                <a id="aboutLink" class="nav-link" href="#about">About us</a>
+                <a id="contactLink" class="nav-link" href="#contact">Contact</a>
             </div>
         </nav>
         <div id="home">
@@ -39,6 +41,10 @@
                 <h2 id="company-name">D'Arrieros</h2>
                 <h1 id="coffee-txt">Coffee</h1>
                 <h3 id="slogan">"Tradición de un pueblo"</h3>
+            </div>
+            <div id="laguage_options_wrapper">
+                <a href="#" id="spanish" class="language_btn"><img class="language_option_img" src="/sources/icons/spanish-language.svg"></a>
+                <a href="#" id="english" class="language_btn"><img class="language_option_img" src="/sources/icons/english-language.svg"></a>
             </div>
         </div>
     </header>
@@ -53,7 +59,7 @@
                         tradiciónes, te guiaremos para que puedas experimentar por ti mismo los procesos involucrados en la siembra y cosecha de variedad 
                         de cafés artesanales, aprende de las tradiciones compartidas por los arrieros antioqueños y prueba de nuestras mejores catas.
                     </p>
-                    <a class="section-btn" id="tour_btn" href="#contact">Más información</a>
+                    <a class="section-btn" id="tour_btn" href="#contact">Info & Booking</a>
                 </div>
                 <!-- Swiper  -->
                 <div class="swiper-container">
@@ -159,5 +165,6 @@
     </footer>
     <script src="js/swiper.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/languages.js"></script>
 </body>
 </html>
