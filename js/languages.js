@@ -29,11 +29,11 @@ function set_spanish() {
     about_link.innerHTML = 'Sobre nosotros';
     contact_link.innerHTML = 'Contacto';
     tour_intro.innerHTML = `Las cosas saben mejor cuando conoces 
-    sus origenes, la experiencias enrriquecen el alma y agudizan 
+    sus origenes, la experiencias enriquecen el alma y agudizan 
     los sentidos, revelando matices que antes eran inperceptibles. 
     Por está razón es un placer compartir contigo nuestras tradiciónes, 
     te guiaremos para que puedas experimentar por ti mismo los procesos 
-    involucrados en la siembra y cosecha de variedad de cafés artesanales, 
+    involucrados en la siembra y cosecha de variedad de cafés orgánicos, 
     aprende de las tradiciones compartidas por los arrieros antioqueños 
     y prueba de nuestras mejores catas.`;
     tour_btn.innerHTML = 'Info & Reservas';
@@ -41,7 +41,7 @@ function set_spanish() {
     coffee_intro.innerHTML = `Tenemos a disposicón cafés especiales tipo 
     <b>Honey</b> y <b>Cherry</b>, procesados con técnicas de cultivo 
     amigables con el medio ambiente, ya que manejamos procesos naturales, 
-    sin uso de químicos, pesticidas ni fungicidas.`;
+    sin uso de químicos como herbicidas, pesticidas ó fungicidas.`;
     cherry.innerHTML = 'Café Cherry';
     cherry_des.innerHTML = `Nuestro café tipo <b>Cherry</b> es secado con la 
     pulpa de la corteza del café, la almendra absorbe todo el dulsor del 
@@ -52,10 +52,10 @@ function set_spanish() {
     mucilago, dando como resultado un agradable dulsor y suavidad en su sabor.`;
     product_buy_btn.innerHTML = 'Comprar ahora';
     about_title.innerHTML = 'Sobre Nosotros';
-    about_article.innerHTML = `<p>Nuestra pequeña finca cafetera, se ubicada en 
-    el corregimiento de San Sebastián de Palmitas Medellin, donde con esfuerzo y 
-    dedicación, ha podido adaptarse para el cultivo y proceso de café de gran 
-    calidad y sabor, haciendo así que nuestros visitantes se lleven una muy buena 
+    about_article.innerHTML = `<p>Nuestra finca cafetera, se encuentra ubicada en 
+    el corregimiento de San Sebastián de Palmitas (Medellin - Colombia), donde con esfuerzo y 
+    dedicación mejoramos constantemente nuestros procesos de cultivo para producir café de gran 
+    calidad y sabor, haciendo así que nuestros visitantes se lleven un buen aprendizaje y una gran
     experiencia cafetera.</p>
     <p style="padding-top: 20px;">
     Durante el tour entenderás el esfuerzo y dedicación necesaria para que llegue a
