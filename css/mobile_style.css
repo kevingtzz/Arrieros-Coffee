@@ -215,14 +215,65 @@ nav a {
     background: var(--section-background-color);
     box-shadow: inset 0px 4px 6px gray;
     display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
 }
 
 .products-wrapper {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    grid-gap: 30px;
+}
+
+.product-card-container {
+    position: relative;
+    margin: auto;
+    width: 320px;
+    height: 405px;
+}
+
+.product-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.product-card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    backface-visibility: hidden;
+    background: var(--section-background-color);
+    color: var(--font-color-title);
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px gray;
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px;
+    backface-visibility: hidden;
+    background: var(--section-background-color);
+    color: var(--font-color-title);
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px gray;
+}
+
+.product-title {
+    margin-bottom: 10px;
+}
+
+.product-title-price {
+    margin-bottom: 30px;
 }
 
 #img-coffee-cherry-wrapper {
@@ -236,6 +287,15 @@ nav a {
     background-repeat: no-repeat;
     transform: translateX(20px);
     filter: drop-shadow(5px 5px 5px #222);
+}
+
+.product-description {
+    font-size: 1.2em;
+}
+
+.product-description-price {
+    margin-bottom: 10px;
+    font-size: 1em;
 }
     
 /*------------------ Global Classes -----------------------*/
@@ -258,6 +318,8 @@ nav a {
 }
 
 .btn-wrapper {
+    position: relative;
+    top: 170px;
     width: 100%;
     margin: 20px 0 20px;
     text-align: center;
@@ -285,23 +347,9 @@ nav a {
 .intersection {
     width: 100vw;
     height: 100px;
+    margin-top: 30px;
     background: var(--intersection-color);
     box-shadow: inset 0px 4px 6px gray;
-}
-
-.products-wrapper {
-    display: grid;
-    margin-bottom: 10px;
-    width: auto;
-    height: auto;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    text-align: center;
-    position: relative; 
-}
-
-#product-honey-wrapper {
-    margin-bottom: 25px;
 }
 
 /*------------------ About section -----------------*/
